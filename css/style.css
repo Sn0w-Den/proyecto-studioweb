@@ -1,0 +1,251 @@
+html{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+
+.contenedor{
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 5% 85% 10%;
+    grid-template-areas:
+    "cabecera"
+    "cuerpo"
+    "pie_pagina";
+    border: 1px solid black;
+}
+/*----------------------------------------------------------Cabecera----------------------------------------------------------*/
+.cabecera{
+    grid-area: cabecera;
+    border: 1px solid green;
+    position: sticky;
+    top: 0px;
+}
+
+#flex_cabecera{
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo{
+    width: 45%;
+    padding-left: 30px;
+}
+
+.active{
+    background-color: rgba(10, 3, 3, 0.53);
+    color: greenyellow;
+}
+
+.menu{
+    width: 45%;
+}
+
+.menu nav ul{
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+}
+
+a{
+    text-decoration: none;
+}
+
+/*----------------------------------------------------------------------------------------------------------------------------*/
+
+/*----------------------------------------------------------Cuerpo----------------------------------------------------------*/
+.cuerpo{
+    grid-area: cuerpo;
+    border: 1px solid red;
+}
+
+#grid_cuerpo{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 5fr 1fr 1fr 1fr;
+    grid-template-areas: 
+    "principal principal"
+    "elegirnos elegirnos"
+    "descriptivo descriptivo"
+    "banner banner";
+}
+
+.principal{
+    grid-area: principal;
+    background-image: url('/imagenes/developer.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.principal h2{
+    padding: 0px 200px 200px 200px;
+    margin: 10px auto auto auto;
+    font-size: 3rem;
+    color: rgb(4, 80, 4);
+}
+
+.principal button{
+    margin: -150px auto auto auto;
+}
+
+.elegirnos{
+    grid-area: elegirnos;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: aqua;
+}
+.elegirnos h3{
+    font-size: 2rem;
+}
+
+.descriptivo{
+    grid-area: descriptivo;
+}
+
+.banner{
+    grid-area: banner;
+
+    background-color: royalblue;
+}
+
+/*--------------------------------------------------------------------------------------------------------------------------*/
+
+/*----------------------------------------------------------Footer----------------------------------------------------------*/
+.pie_pagina{
+    grid-area: pie_pagina;
+    border: 1px solid blue;
+}
+
+#contenedor_pie{
+    display: grid;
+    grid-template-columns: 1.5fr 3fr 1.5fr;
+    grid-template-rows: 2fr 1fr;
+    grid-template-areas: 
+    "pie_logo pie pie_redes"
+    "pie_copyright pie_copyright pie_copyright";
+}
+
+.pie_logo{
+    grid-area: pie_logo;
+}
+
+.pie{
+    grid-area: pie;
+}
+
+.pie_redes{
+    grid-area: pie_redes;
+}
+
+.pie_copyright{
+    grid-area: pie_copyright;
+    display: flex;
+    justify-content: center;
+}
+/*--------------------------------------------------------------------------------------------------------------------------*/
+
+/*-------------------------------------------------------media-query-------------------------------------------------------*/
+
+@media(max-width: 600px){
+    .contenedor{
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 10% 80% 10%;
+        grid-template-areas:
+        "cabecera"
+        "cuerpo"
+        "pie_pagina";
+        border: 1px solid black;
+        background-color: blueviolet;
+    }
+/*------------------------Cabecera------------------------*/
+    .cabecera{
+        grid-area: cabecera;
+        border: 1px solid green;
+        position: sticky;
+        top: 0px;
+    }
+
+    #flex_cabecera{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .logo{
+        width: 80%;
+        display: flex;
+        justify-content: center;
+        padding: 0px;
+    }
+
+    .menu{
+        width: 100%;
+    }
+
+    .menu nav ul{
+        list-style: none;
+        display: flex;
+        justify-content: space-around;
+        padding: 0px;
+    }
+/*--------------------------------------------------------*/
+
+/*------------------------cuerpo------------------------*/
+    #grid_cuerpo{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 2fr 1fr 0.5fr 0.5fr;
+        grid-template-areas: 
+        "principal principal"
+        "elegirnos elegirnos"
+        "descriptivo descriptivo"
+        "banner banner";
+    }
+
+    .principal h2{
+        padding: 0px;
+        margin: 10px auto auto auto;
+        font-size: 2rem;
+        color: rgb(4, 80, 4);
+    }
+
+    .principal button{
+        margin: auto;
+    }
+}
+
+
+
+/*Nostros*/
+#grid_nosotros{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 2fr;
+    grid-template-areas: 
+    "titulo_nosotros titulo_nosotros"
+    "mision vision";
+}
+
+.titulo_nosotros{
+    grid-area: titulo_nosotros;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mision{
+    grid-area: mision;
+}
+
+.vision{
+    grid-area: vision;
+}
