@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Nosotros</title>
+</head>
+<body>
+    <div class="cont_nostros">
+        <header id="flex_cabecera" class="cabecera">
+            <div class="logo">
+                <h1>StudioWeb</h1>
+            </div>
+            <div class="menu">
+                <nav>
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="">Nosotros</a></li>
+                        <li><a href="">Servicios</a></li>
+                        <li><a href="">Contactanos</a></li>
+                        <li><a href="">Blog</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+        <script>
+            $(function() {
+                $(window).on("scroll", function() {
+                    if($(window).scrollTop() > 10) {
+                        $(".cabecera").addClass("active");
+                    } else {
+                        //remove the background property so it comes transparent again (defined in your css)
+                    $(".cabecera").removeClass("active");
+                    }
+                });
+            });
+        </script>
+
+        </header>
+
+        <main id="grid_nosotros">
+            <div class="titulo_nosotros">
+                <h1>Nosotros</h1>
+            </div>
+            <div class="mision">
+                <h2>Misión</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti blanditiis praesentium laboriosam. Fuga porro ipsa rerum? Natus, aliquam quaerat nisi porro, enim, ipsum consequuntur nemo fugit excepturi odit earum cum?</p>
+            </div>
+            <div class="vision">
+                <h2>Visión</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, harum nostrum. Repellat quaerat quis aperiam illo est, quisquam consectetur error sapiente quidem ducimus. Reiciendis non, corrupti eligendi voluptates repellendus labore!</p>
+            </div>
+        </main>
+
+        <footer id="contenedor_pie" class="pie_pagina">
+            <div class="pie_logo">
+                <h1>LOGO</h1>
+            </div>
+            <div class="pie">
+
+            </div>
+            <div class="pie_redes">
+                <H1>REDES SOCIALES</H1>
+            </div>
+            <div class="pie_copyright">
+                <h6>Copyright StudioWeb 2022</h6>
+            </div>
+        </footer>
+
+    </div>
+    
+</body>
+</html>
